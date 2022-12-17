@@ -10,6 +10,7 @@
 			href="https://fonts.googleapis.com/css?family=Righteous"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
 		<title>Odin Sign Up Form</title>
 	</head>
 	<body>
@@ -35,7 +36,7 @@
 					<p>You <span>know</span> you want to.</p>
 				</div>
 
-				<form>
+				<form oninput="pwdCheck()">
 					<h2>Let's do this!</h2>
 					<div class="form-container">
 						<div class="input-container">
@@ -56,11 +57,18 @@
 						</div>
 						<div class="input-container">
 							<label for="password">Password</label>
-							<input type="password" id="password" name="password" />
+
+							<input type="password" id="password" class="" name="password" />
+							<small id="error_text">Passwords do not match</small>
 						</div>
 						<div class="input-container">
 							<label for="confirm-password">Confirm Password</label>
-							<input type="password" id="confirm-password" name="confirm-password" />
+							<input
+								type="password"
+								id="confirm_password"
+								class=""
+								name="confirm-password"
+							/>
 						</div>
 					</div>
 				</form>
